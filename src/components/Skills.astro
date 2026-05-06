@@ -1,0 +1,420 @@
+---
+// components/Skills.astro
+---
+
+<section class="section-wrap skills-section">
+  <div class="sk-glow"></div>
+
+  <div class="section-inner">
+    <div class="sk-header">
+      <h2 class="section-title">
+        Tecnologías que <span class="accent">domino</span>
+      </h2>
+      <p class="section-subtitle">
+        Herramientas y lenguajes con los que he trabajado.
+      </p>
+    </div>
+
+    <div class="sk-body">
+      <!-- Categorías -->
+      <div class="sk-categories" id="sk-cats">
+        <button class="sk-cat-btn active" data-cat="stack">
+          <span class="sk-cat-dot"></span>
+          Stack de trabajo actual
+          <span class="sk-cat-count">6</span>
+        </button>
+        <button class="sk-cat-btn" data-cat="frontend">
+          <span class="sk-cat-dot"></span>
+          Frontend
+          <span class="sk-cat-count">6</span>
+        </button>
+        <button class="sk-cat-btn" data-cat="backend">
+          <span class="sk-cat-dot"></span>
+          Backend
+          <span class="sk-cat-count">3</span>
+        </button>
+        <div class="sk-divider"></div>
+        <button class="sk-cat-btn" data-cat="db">
+          <span class="sk-cat-dot"></span>
+          Base de datos
+          <span class="sk-cat-count">3</span>
+        </button>
+        <button class="sk-cat-btn" data-cat="tools">
+          <span class="sk-cat-dot"></span>
+          Herramientas
+          <span class="sk-cat-count">5</span>
+        </button>
+      </div>
+
+      <!-- Pills de tecnologías -->
+      <div class="sk-pills-wrap">
+        <p class="sk-pills-label" id="sk-label">stack</p>
+        <div class="sk-pills" id="sk-pills"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const SKILLS = {
+    stack: {
+      label: "Stack actual",
+      items: [
+        {
+          name: "Laravel",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+          featured: true,
+        },
+        {
+          name: "MySQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+          featured: true,
+        },
+        {
+          name: "Bootstrap",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+          featured: true,
+        },
+        {
+          name: "JavaScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+          featured: true,
+        },
+        {
+          name: "Git",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          featured: true,
+        },
+        {
+          name: "VS Code",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+          featured: true,
+        },
+      ],
+    },
+    frontend: {
+      label: "Frontend",
+      items: [
+        {
+          name: "React",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          featured: true,
+        },
+        {
+          name: "Astro",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+          featured: true,
+        },
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+          featured: true,
+        },
+        {
+          name: "Tailwindcss",
+          icon: "https://cdn.simpleicons.org/tailwindcss",
+          featured: true,
+        },
+        {
+          name: "HTML5",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+          featured: true,
+        },
+        {
+          name: "CSS3",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+          featured: true,
+        },
+      ],
+    },
+    backend: {
+      label: "Backend",
+      items: [
+        {
+          name: "Laravel",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+          featured: true,
+        },
+        {
+          name: "Django",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+          featured: true,
+        },
+        {
+          name: "Node.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          featured: true,
+        },
+      ],
+    },
+    db: {
+      label: "Base de datos",
+      items: [
+        {
+          name: "MySQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+          featured: true,
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+          featured: true,
+        },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+          featured: true,
+        },
+      ],
+    },
+    tools: {
+      label: "Herramientas",
+      items: [
+        {
+          name: "Git",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          featured: true,
+        },
+        {
+          name: "GitHub",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+          featured: true,
+        },
+        {
+          name: "Docker",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+          featured: true,
+        },
+        {
+          name: "VS Code",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+          featured: true,
+        },
+        {
+          name: "Linux",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+          featured: true,
+        },
+      ],
+    },
+  };
+
+  function renderPills(cat) {
+    const { label, items } = SKILLS[cat];
+    document.getElementById("sk-label").textContent = label;
+    document.getElementById("sk-pills").innerHTML = items
+      .map(
+        (i) => `
+        <div class="sk-pill${i.featured ? " featured" : ""}">
+          <img src="${i.icon}" alt="${i.name}" width="18" height="18"
+               onerror="this.style.display='none'" />
+          ${i.name}
+        </div>`,
+      )
+      .join("");
+  }
+
+  document.getElementById("sk-cats").addEventListener("click", (e) => {
+    const btn = e.target.closest(".sk-cat-btn");
+    if (!btn) return;
+    document
+      .querySelectorAll(".sk-cat-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderPills(btn.dataset.cat);
+  });
+
+  renderPills("stack");
+</script>
+
+<style>
+  .skills-section {
+    background: var(--color-bg);
+  }
+
+  .sk-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99, 130, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 130, 255, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .sk-glow {
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(79, 107, 255, 0.09) 0%,
+      transparent 70%
+    );
+    bottom: -80px;
+    right: -60px;
+    pointer-events: none;
+  }
+
+  .sk-header {
+    margin-bottom: 3.5rem;
+  }
+  .sk-header .accent {
+    color: var(--color-accent);
+  }
+
+  .sk-body {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* Categorías */
+  .sk-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sk-cat-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 0.5px solid transparent;
+    background: transparent;
+    color: #5a6a96;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    text-align: left;
+  }
+  .sk-cat-btn:hover {
+    background: rgba(99, 130, 255, 0.06);
+    color: #a0b4ff;
+    border-color: rgba(99, 130, 255, 0.15);
+  }
+  .sk-cat-btn.active {
+    background: rgba(99, 130, 255, 0.1);
+    border-color: rgba(99, 130, 255, 0.3);
+    color: #c0ccff;
+  }
+
+  .sk-cat-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    opacity: 0.4;
+    flex-shrink: 0;
+    transition: opacity 0.18s;
+  }
+  .sk-cat-btn.active .sk-cat-dot {
+    opacity: 1;
+  }
+
+  .sk-cat-count {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: #3a4a70;
+    background: rgba(99, 130, 255, 0.08);
+    padding: 2px 7px;
+    border-radius: 100px;
+  }
+  .sk-cat-btn.active .sk-cat-count {
+    color: var(--color-accent);
+  }
+
+  .sk-divider {
+    width: 100%;
+    height: 0.5px;
+    background: rgba(122, 138, 181, 0.12);
+    margin: 0.25rem 0;
+  }
+
+  /* Pills */
+  .sk-pills-wrap {
+    min-height: 180px;
+  }
+
+  .sk-pills-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #3a4a70;
+    margin-bottom: 1.25rem;
+  }
+
+  .sk-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sk-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    border: 0.5px solid rgba(99, 130, 255, 0.18);
+    background: rgba(255, 255, 255, 0.025);
+    color: #b0bcd8;
+    font-size: 0.8rem;
+    transition: all 0.18s;
+  }
+  .sk-pill:hover {
+    border-color: rgba(99, 130, 255, 0.4);
+    background: rgba(99, 130, 255, 0.08);
+    color: #d0d8f5;
+  }
+  .sk-pill.featured {
+    border-color: rgba(99, 130, 255, 0.35);
+    background: rgba(99, 130, 255, 0.08);
+    color: #c0ccff;
+  }
+
+  .sk-pill img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  /* Pills — deben ser globales porque se insertan con innerHTML */
+  :global(.sk-pill) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    border: 0.5px solid rgba(99, 130, 255, 0.18);
+    background: rgba(255, 255, 255, 0.025);
+    color: #b0bcd8;
+    font-size: 0.8rem;
+    transition: all 0.18s;
+  }
+  :global(.sk-pill:hover) {
+    border-color: rgba(99, 130, 255, 0.4);
+    background: rgba(99, 130, 255, 0.08);
+    color: #d0d8f5;
+  }
+  :global(.sk-pill.featured) {
+    border-color: rgba(99, 130, 255, 0.35);
+    background: rgba(99, 130, 255, 0.08);
+    color: #c0ccff;
+  }
+  :global(.sk-pill img) {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 600px) {
+    .sk-body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
